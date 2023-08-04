@@ -1,0 +1,204 @@
+/* Home.css */
+
+/* Navbar styling */
+.highlighted {
+  font-size:50px;
+/* Replace with your desired highlight color*/
+} 
+
+nav {
+  background-color: white;
+  padding: 2px;
+  /* Add more styling as needed */
+}
+
+/* Container for the paragraph and image */
+.slider-with-content-container {
+  display: flex;
+  align-items: center;
+  background-color: FFFFF0; /* Set your desired background color here */
+  padding: 20px;
+  margin-right: 30px;
+  margin-left: 70px;
+}
+
+/* Image container */
+.image-box-container {
+  flex: 1;
+  display: flex;
+}
+
+/* Image box styles */
+.image-box {
+  width: 100%; /* Set the width to 70% to take up 70% of the screen on PCs */
+  height: 600px; /* Adjust the height as needed */
+  border: 2px solid yellow;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+/* Content box styles */
+.content-box {
+  flex: 1;
+  padding: 20px;
+  width: 80%;
+  max-width: 100%; 
+  /* Set the max-width to 30% to take up 30% of the screen on PCs */
+}
+
+.text-box {
+  text-align: left;
+  font-size: 30px;
+}
+
+/* Mobile compatibility */
+@media (max-width: 768px) {
+  .slider-with-content-container {
+    flex-direction: column;
+    padding-right: 0; /* Remove padding on mobile to align properly */
+    margin-right: 0; /* Remove margin on mobile */
+    margin-left: 0; /* Remove margin on mobile */
+  }
+  .image-box-container {
+    justify-content: center;
+  }
+
+  .image-box {
+    margin-right: 0;
+    margin-bottom: 20px;
+    max-width: 100%;
+    width: 100%; /* Set the width to 100% on mobile */
+  }
+
+  .content-box {
+    max-width: 100%;
+    width: 100%; /* Set the width to 100% on mobile */
+  }
+}
+/* Larger screens (PCs) */
+@media (min-width: 769px) {
+  .slider-with-content-container {
+    flex-direction: row-reverse; /* Image on the right side */
+  }
+
+  .image-box-container {
+    justify-content: flex-end; /* Image on the right side */
+  }
+
+  .image-box {
+    margin-left: 20px;
+  }
+
+  .content-box {
+    max-width: 50%;
+  }
+}
+
+.Abot{
+  background-image: linear-gradient( 135deg,
+  #ff0000,
+  #ff7f00,
+  #ffff00,
+  #00ff00,
+  #0000ff,
+  #4b0082,
+  #9400d3); /* Replace with your desired mixed color */
+  padding: 20px; /* Add padding to create spacing around the text */
+  text-align: center; /* Center the text horizontally */
+  color: #fff;
+  margin-left: 20px;
+  margin-right: 20px; /* Set the text color to white */
+  /* Add any other styles you want for the box */
+}
+/* AnimationBoxes.css */
+
+.animation-boxes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+ /* Adjust as needed */
+  margin-right: 20px;
+  margin-left: 20px;
+  text-align: center;
+
+  /* Mixed color gradient background for the container */
+  background-image: linear-gradient(
+    135deg,
+    #ff0000,
+    #ff7f00,
+    #ffff00,
+    #00ff00,
+    #0000ff,
+    #4b0082,
+    #9400d3
+  );;
+  /* You can adjust the angle and add more colors if needed */
+  /* For example: */
+  /* background-image: linear-gradient(45deg, #ffcc00, #ff6699, #33ccff, #9933cc); */
+  /* Adjust the angle (45deg) and add more colors as desired */
+  
+  /* Other background properties */
+  padding: 20px; /* Add some padding to create space for the boxes */
+}
+
+
+/* Add this CSS to create the heart-shaped button */
+.heart-button-container {
+  display: inline-block;
+  position: relative;
+}
+
+.heart-button {
+  display: block;
+  background-color: #e74c3c;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  margin: 10px; /* Add margin to create space around the button */
+}
+
+.heart-button::before,
+.heart-button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #e74c3c;
+  border-radius: 50%;
+  transition: transform 0.4s;
+  z-index: -1; /* Move the pseudo-elements behind the button text */
+}
+
+.heart-button::before {
+  left: 0;
+  transform-origin: 100% 50%;
+}
+
+.heart-button::after {
+  right: 0;
+  transform-origin: 0 50%;
+}
+
+.heart-button:hover::before,
+.heart-button:hover::after {
+  transform: scale(2);
+}

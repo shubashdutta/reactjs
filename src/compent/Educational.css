@@ -1,0 +1,718 @@
+/* src/components/About.css */
+
+/* .about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: whitesmoke; /* Set your desired background color here */
+    /* border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  } */
+  
+  .education-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    color:black;
+    text-decoration: underline;
+    text-decoration-color: rgba(211, 211, 9, 0.756);
+    margin-left: 30px;
+ 
+ 
+  }
+  
+  .education-content {
+    line-height: 1.6;
+    color: #666;
+   
+  }
+  
+  .education-container p {
+    text-align: center;
+    font-size: 18px;
+    color: #666; /* Change the color as desired */
+    margin-bottom: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    
+  }
+
+
+ /* About.css */
+
+/* ... (existing CSS rules) ... */
+
+.education-container {
+  position: relative;
+  min-width: 100%; /* Set the container width to 100% of the viewport width */
+  text-align: center;
+  min-height: 100%;
+  overflow: hidden; /* Hide any content that overflows the container */
+  margin-bottom: 10px;
+}
+
+.education-image {
+  position: static;
+  width: 140px; /* Set the image width to 100% of the container width */
+  height: 720px; /* You can adjust the height as needed */
+  background-size: cover;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  margin-right: 50px;
+  /* margin-left: 50px; */
+  /* object-position:screen; */
+}
+
+/* ... (existing CSS rules) ... */
+
+/* src/components/Educational.css */
+
+/* ... (existing CSS rules) ... */
+
+.education-data-container {
+  display: flex;
+  justify-content: center; /* Center the boxes horizontally */
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap; /* Add flex-wrap property to wrap boxes to the next line */
+  max-width: 800px; /* Set a maximum width for the container */
+  margin: 0 auto; /* Center the container on the page */
+}
+
+/* src/components/Educational.css */
+
+/* ... (existing CSS rules) ... */
+
+.education-data-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.education-data-box {
+  background-color: #f0f0f0;
+  
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: calc(33.33% - 20px); /* Set width to 33.33% to fit three boxes in a row */
+  text-align: center; /* Center the content horizontally */
+}
+
+.education-data-box h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+  /* color: #ff0000; */
+}
+
+.education-data-box p {
+  font-size: 25px;
+  color: #666;
+  margin: 0;
+}
+
+/* ... (remaining CSS rules) ... */
+
+
+.education-data-box h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.education-data-box h1 {
+  background-image: linear-gradient(135deg, #ff0000, #00ff00); /* Replace #ff0000 and #00ff00 with your desired colors */
+  color: #fff; /* Set the text color to white for better visibility */
+  padding: 10px 20px; /* Add some padding to the header to make it visually appealing */
+  border-radius: 10px; 
+}
+/* src/components/Educational.css */
+
+/* ... (existing CSS rules) ... */
+
+.education-data-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  /* Add any other styles you want for the container */
+}
+
+.education-data-box {
+  position: relative; /* Add relative positioning to the box */
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  color: #fff; /* Set the text color to white for better visibility */
+  border-radius: 10px; /* Optional: Add border-radius to give a rounded corner effect */
+}
+
+.education-data-box::before,
+.education-data-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%; /* Adjust the width as needed */
+  z-index: -1;
+}
+
+.education-data-box::before {
+  left: -10px; /* Adjust the position as needed */
+  background-color: #ff0000; /* Replace #ff0000 with your desired color for the left side */
+  border-radius: 10px 0 0 10px; /* Optional: Add border-radius for the left side */
+}
+
+.education-data-box::after {
+  right: -10px; /* Adjust the position as needed */
+  background-color: #00ff00; /* Replace #00ff00 with your desired color for the right side */
+  border-radius: 0 10px 10px 0; /* Optional: Add border-radius for the right side */
+}
+
+/* ... (remaining CSS rules) ... */
+/* src/components/Educational.css */
+
+/* ... (existing CSS rules) ... */
+
+.education-data-outer-container {
+  display: flex;
+  align-items: center;
+  color: white; /* Add background color to the wrapper container */
+  padding: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+  background-image: linear-gradient( 135deg,
+  #ff0000,
+  #ff7f00,
+  #ffff00,
+  #00ff00,
+  #0000ff,
+  #4b0082,
+  #9400d3);
+}
+.education-description {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ff0000;
+  text-align: center;
+  margin-top: 20px;
+  /* background-color: #ffff00; */
+  margin-left: 50%;
+
+}
+.education-data-left-color {
+  flex: 1;
+  height: 100%;
+  background: linear-gradient(to right, #ff0000, #f0f0f0); /* Left color gradient */
+}
+/* Add this CSS to your existing CSS file or create a new one */
+@media (max-width: 767px) {
+  .education-data-container {
+    justify-content: flex-start; /* Align the boxes to the left on smaller screens */
+  }
+  
+  .education-data-box {
+    flex: 1 0 calc(50% - 20px); /* Show two boxes in a row on smaller screens */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .education-data-box {
+    flex: 1 0 calc(33.33% - 20px); /* Show three boxes in a row on medium-sized screens */
+  }
+}
+/* With these updated styles and media queries, the .education-data-container and .education-data-box will adjust their layout based on different screen sizes. On smaller screens (max-width: 767px), the boxes will be aligned to the left, and two boxes will be shown in a row. On medium-sized screens (min-width: 768px) and (max-width: 991px), three boxes will be shown in a row.
+
+As always, adjust the media query breakpoints and other styles based on your specific layout and design requirements. */
+
+
+
+
+
+
+.donate-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.donate-section h4 {
+  font-size: 15px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+  text-align: center;
+}
+
+.donate-section p {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-right: 30px;
+  margin-left: 30px;
+
+}
+
+.donate-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: green;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.donate-button:hover {
+  background-color: red;
+}
+
+.important-header {
+  background-color: rgb(236, 109, 130); /* Add your desired background color here */
+  padding: 20px; /* Add some padding for spacing */
+  text-align: center; /* Align the content in the center */
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.important-header h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-decoration: underline;
+  text-decoration-color: yellow;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.important-header .paragraph {
+  font-size: 18px;
+ 
+ margin: 0;
+  text-align: center;
+}
+.important-header p {
+  font-size: 18px;
+  margin-left: 40px;
+  margin-right: 40px;
+  color: white;
+  /* Add any other styles you want for the paragraph */
+}
+
+.important-header * {
+  line-height: normal; /* Remove the line-height for all elements inside .important-header */
+}
+.education-data-container {
+  flex: 4; /* Adjust the width of the data container as needed */
+  display: flex;
+  justify-content: center; /* Center the boxes horizontally */
+  gap: 20px;
+}
+
+.education-data-right-color {
+  flex: 1;
+  height: 100%;
+  background: linear-gradient(to left, #ff0000, #f0f0f0); /* Right color gradient */
+}
+
+/* ... (remaining CSS rules) ... */
+
+
+.education-data-box p {
+  font-size: 25px;
+  color: black;
+  margin: 0;
+}
+
+/* ... (remaining CSS rules) ... */
+/* .education-data-box h1 {
+  text-shadow: 2px  yellow; /* Replace #ff0000 with your desired highlight color */
+/* } */ 
+  
+  .education-text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* Set the text color */
+    /* Add any additional styling for the text overlay */
+  }
+  
+  @media (max-width: 767px) {
+    .education-map-paragraph-container {
+      flex-direction: column; /* Stack the elements vertically on small screens */
+    }
+    
+    .education-map-box, .education-paragraph-box {
+      flex-basis: 100%; /* Take full width on small screens */
+    }
+  }
+  .education-text-container {
+    text-align: justify;
+    margin-right: 20px;
+    margin-left: 20px; /* This aligns the paragraph text */
+  }
+  
+  .education-paragraph {
+    margin-right: 20px;
+    margin-left: 20px; /* Remove any default margins for the paragraph */
+  }  
+  .education-subheading{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 40px;
+    color:black;
+    text-decoration: underline;
+    text-decoration-color:rgba(224, 224, 4, 0.975);
+    text-underline-offset: 10px;
+    margin-bottom: 30px;
+   
+  }
+ 
+ /* src/components/About.css */
+
+/* ... (previous CSS rules) ... */
+.education-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto; /* This will center the entire .grid-box */
+  max-width: 800px; /* Set a maximum width for the .grid-box */
+}
+
+.education-box p {
+  font-size: 16px;
+  margin: 0; /* Remove the top and bottom margins for the paragraphs */
+}
+
+/* ... (remaining CSS rules) ... */
+
+/* Additional styles for the gap between image and Disclaimer */
+.education-text-container {
+    text-align: center;
+  }
+  
+  /* Add gap between image and vision box */
+  .education-container {
+    margin-bottom: 50px;
+  }
+  
+  /* Center the paragraph text */
+  .education-container p {
+    text-align: center;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    
+  }
+  
+ 
+  
+  /* src/components/About.css */
+
+/* Your existing CSS styles ... */
+
+/* Mobile Compatibility */
+
+/* Adjust font size and margin for smaller screens */
+@media (max-width: 767px) {
+  .education-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .education-content p {
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .education-heading {
+    font-size: 32px;
+    text-underline-offset: 5px;
+    margin-bottom: 20px;
+  }
+
+  .vision {
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 2%;
+  }
+
+  .education-box p {
+    font-size: 14px;
+  }
+}
+
+/* Laptop/Desktop and Tablet View */
+
+/* Adjust container width and image height for larger screens */
+@media (min-width: 768px) {
+  .image-container {
+    min-width: 100%;
+    min-height: 600px;
+  }
+
+  .education-image {
+    width: 100%;
+    height: 600px; /* You can adjust the height as needed for larger screens */
+  }
+
+  /* Add gap between image and vision box for larger screens */
+  .education-container {
+    margin-bottom: 50px;
+  }
+}
+
+/* The rest of your existing CSS styles ... */
+
+/* Additional styles for the gap between image and Disclaimer */
+.education-text-container {
+  text-align: center;
+}
+
+/* Add gap between image and vision box */
+.education-container {
+  margin-bottom: 50px;
+}
+
+/* Center the paragraph text */
+.education-container p {
+  text-align: center;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ... (remaining CSS rules) ... */
+/* src/components/Educational.css */
+
+/* ... (existing CSS rules) ... */
+
+.education-map-paragraph-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 40px;
+}
+
+.education-map-box {
+  flex-basis: 50%;
+}
+
+.india-map {
+  width: 100%; /* Adjust the width as needed */
+  width: 400px;
+  height: 400px; /* Maintain the aspect ratio */
+  margin-bottom: 10px;
+}
+
+.education-map-paragraph {
+  flex-basis: 40%;
+  padding: 20px;
+  background-color: black;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  line-height: 1.6;
+}
+.education-paragraph-box h2 {
+  color: #ff0000; /* Replace with your desired color */
+}
+/* CSS for the single-image-container */
+/* CSS for the single-image-container */
+.single-image-container {
+  align-items: center;
+}
+
+/* CSS for the image inside the single-image-container */
+.single {
+  width: 1000px;
+  height: auto;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+/* CSS for the header inside the single-image-container */
+.single-image-container h4 {
+  font-size: 24px;
+  color: #333;
+  margin-right: 10px;
+  margin-top: 30px;
+  text-decoration: underline;
+  text-decoration-color:yellow;
+}
+
+/* CSS for the paragraph inside the single-image-container */
+.single-image-container p {
+  
+    line-height: normal;
+    color: #fff; /* Set the text color to white */
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  
+
+@media (max-width: 767px) {
+  .single {
+    width: 100%; /* Adjust the image width for smaller screens */
+    max-width: none; /* Remove the maximum width for better responsiveness on smaller screens */
+    margin-right: 0; /* Remove margin for better alignment on smaller screens */
+  }
+}
+
+/* src/components/About.css */
+
+/* ... (previous CSS rules) ... */
+
+/* Mobile Compatibility */
+
+/* Adjust font size and margin for smaller screens */
+@media (max-width: 767px) {
+  .education-heading {
+    font-size: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .education-content p {
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .education-subheading {
+    font-size: 28px;
+    text-underline-offset: 5px;
+    margin-bottom: 15px;
+  }
+
+  .education-image {
+    width: 100%;
+    height: auto; /* Adjust the height proportionally for smaller screens */
+  }
+
+  .education-container {
+    margin-bottom: 20px;
+  }
+}
+
+/* Laptop/Desktop and Tablet View */
+@media (min-width: 768px) {
+  .education-heading {
+    font-size: 32px;
+    text-underline-offset: 10px;
+    margin-bottom: 30px;
+  }
+
+  .education-content p {
+    font-size: 18px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .education-subheading {
+    font-size: 40px;
+    text-underline-offset: 10px;
+    margin-bottom: 30px;
+  }
+
+  .image-container {
+    min-width: 100%;
+    min-height: 600px;
+  }
+
+  .education-image {
+    width: 100%;
+    height: 600px; /* Adjust the height as needed for larger screens */
+  }
+
+  .education-container {
+    margin-bottom: 50px;
+  }
+}
+
+/* Additional styles for the gap between image and Disclaimer */
+.education-text-container {
+  text-align: center;
+}
+
+/* ... (remaining CSS rules) ... */
+
+.Education-child {
+  background-color: #bb0a7a; /* Change to your desired background color */
+  padding: 20px;
+  text-align: center;
+  margin: 20px 40px 40px; /* Added margin on top, and margin on left and right */
+}
+
+.Education-child h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  /* color: #fff; Set the text color to white */
+  text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-color: yellow;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.Education-child .paragraph {
+  font-size: 18px;
+  margin: 0;
+  text-align: center;
+  color: #fff; /* Set the text color to white */
+}
+
+.Education-child p {
+  line-height: normal;
+  color: #fff; /* Set the text color to white */
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.Education-child h4 {
+  text-decoration: underline;
+  text-decoration-color: yellow; /* Change the underline color to red (#ff0000) */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.button-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.donate-link-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: green;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.donate-link-button:hover {
+  background-color: red;
+}

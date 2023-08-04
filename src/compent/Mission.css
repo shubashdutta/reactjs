@@ -1,0 +1,140 @@
+/* AnimationBoxes.css */
+
+/* Add a wrapper container for the image and boxes */
+.animation-boxes-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow boxes to wrap on smaller screens */
+    
+  }
+  
+  .animation-box {
+    position: relative;
+    width: 200px;
+    height: 300px; /* Set the height of each box */
+    border: 1px solid #ccc;
+    margin: 10px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  /* Adjust styles for smaller screens and mobile devices */
+  @media screen and (max-width: 768px) {
+    .animation-box {
+      width: 100%; /* Full width on smaller screens */
+      max-width: 400px; /* Limit maximum width for readability */
+      height: auto; /* Let the height adjust automatically based on content */
+    }
+  }
+  
+  .box-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Add this to ensure the image doesn't overflow the container */
+    transition: transform 0.3s ease-in-out; /* Add a transition for smooth animation */
+  }
+  
+  .animation-box:hover .box-image {
+    transform: translateY(-100%); /* Move the image up on hover */
+  }
+  
+  .box-image img {
+    width: 100%; /* Make the image width 100% of the container */
+    height: 100%; /* Make the image height 100% of the container */
+    object-fit: cover; /* Ensure the image covers the entire container while preserving aspect ratio */
+  }
+  
+  .box-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    transform: translateY(100%); /* Move the info below the box initially */
+    transition: transform 0.3s ease-in-out; /* Add a transition for smooth animation */
+  }
+  
+  .animation-box:hover .box-info {
+    transform: translateY(0%); /* Move the info up to show on hover */
+  }
+  
+  h3 {
+    margin: 0;
+    font-size: 18px;
+    text-align: center; /* Center the title */
+    margin-left: 50px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 25px;
+    margin-right: 50px;
+  }
+  
+  h3::after {
+    content: '';
+    display: block;
+    width: 50px; /* Adjust the underline width */
+    height: 2px; /* Adjust the underline height */
+    background-color: yellowgreen; /* Set the underline color (blue) */
+    position: absolute;
+    bottom: -5px; /* Adjust the distance between the title and underline */
+    left: 50%; /* Center the underline */
+    transform: translateX(-50%); /* Center the underline horizontally */
+    transition: width 0.3s ease-in-out; /* Add a transition for underline width */
+  }
+  
+  .animation-box:hover h3::after {
+    width: 100%; /* Increase the underline width on hover */
+  }
+  
+  /* Style for the box content */
+  .box-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    bottom: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    text-align: center;
+  }
+  
+  /* Show the box content on hover */
+  .animation-box:hover .box-content {
+    display: block;
+    transform: translateX(-50%) translateY(-100%); /* Move the box content up on hover */
+  }
+  
+  /* Style for the description text */
+  .box-content p {
+    margin: 0;
+  }
+  
+  /* Styles for the "Read More" button */
+  .read-more-button {
+    display: block;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .read-more-button:hover {
+    background-color: #0056b3;
+  }
+
+  .mission-container {
+    margin-top: 100px; /* Adjust the value as needed */
+  }

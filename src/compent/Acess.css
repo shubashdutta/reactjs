@@ -1,0 +1,86 @@
+/* Logoin.css */
+
+.signin-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+  }
+  
+  .logo-container {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
+  
+  .logo-image {
+    width: 100px;
+    height: auto;
+  }
+  
+  .signin-form-container {
+    position: relative;
+    width: 500px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-image: url('https://i.ibb.co/h8yCTKn/Logo-1.png'); /* Replace 'your-logo-image-url.png' with your logo image URL */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .signin-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Set the width to 100% to fill the parent container */
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%; /* Set the width to 100% to fill the parent container */
+  }
+  
+  input {
+    padding: 15px; /* Increase the padding for the email and password input boxes */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    width: 100%; /* Set the width to 100% to fill the parent container */
+  }
+  
+  input::placeholder {
+    color: #aaa;
+  }
+  
+  .show-password {
+    cursor: pointer;
+    margin-top: 5px;
+    color: #007bff;
+    font-size: 14px;
+  }
+  
+  button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

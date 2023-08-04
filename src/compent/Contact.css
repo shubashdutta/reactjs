@@ -1,0 +1,187 @@
+
+
+.add-pic-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.add-pic-form input {
+  display: none;
+}
+
+.add-pic-form label {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-pic-form label:hover {
+  background-color: #0056b3;
+}
+
+/* ... Existing styles ... */
+/* Contact.css */
+
+/* Contact.css */
+
+.our-work-header {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.work-pics-container {
+  overflow: hidden;
+  background: linear-gradient(45deg, #f9f9f9, #eaeaea, #f9f9f9, #eaeaea); /* Add the linear gradient for the mix background */
+  background-image: linear-gradient( 135deg,
+  #ff0000,
+  #ff7f00,
+  #ffff00,
+  #00ff00,
+  #0000ff,
+  #4b0082,
+  #9400d3);
+  padding: 20px; 
+  height: 200px; 
+}
+
+.work-pics {
+  display: flex;
+  animation: moveLeft 20s linear infinite;
+}
+
+.work-pics img {
+  max-width: 200px; /* Reduce the max-width to make the images narrower */
+  height: 100%; /* Set the height to 100% to make the images fit within the container */
+  object-fit: cover; /* Use object-fit to maintain the aspect ratio and fit the images within the container */
+  margin: 30px; /* Add more margin for increased spacing between images */
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Add other styles as needed for Contact Information, Stay Connected, and Get Involved sections */
+
+
+/* Contact.css */
+
+/* Container styles */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact h1{
+ text-align: center;
+ text-decoration: underline;
+ text-decoration-color:yellow ;
+}
+.contact p{
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+ }
+.get-involved h2{
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color:yellow ;
+}
+
+
+/* Common styles for all screen sizes */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Common styles for contact information */
+.contact-info {
+  margin-bottom: 40px;
+  text-align: center; /* Center the table horizontally */
+}
+
+.contact-info ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contact-info li {
+  margin-bottom: 8px;
+}
+
+/* Common styles for tables */
+.contact-info table {
+  width: 100%;
+  max-width: 500px; /* Adjust the max-width as needed */
+  margin: 0 auto; /* Center the table horizontally */
+  border-collapse: collapse; /* Collapse borders between table cells */
+}
+
+.contact-info td {
+  padding: 10px; /* Add padding to create space between content and borders */
+  border: 1px solid #ccc; /* Add a 1px solid gray border to each table cell */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 767px) {
+  .contact-section {
+    margin-left: 10px; /* Reduce left margin for mobile */
+    margin-right: 10px; /* Reduce right margin for mobile */
+  }
+  
+  .contact-info td {
+    padding: 5px; /* Reduce padding for mobile */
+  }
+}
+
+/* Laptop and Tablet-specific styles */
+@media (min-width: 768px) {
+  .contact-section {
+    margin-left: 40px; /* Restore left margin for laptops and tablets */
+    margin-right: 40px; /* Restore right margin for laptops and tablets */
+  }
+}
+
+
+/* ... Existing styles ... */
+
+/* ... Existing styles ... */
+
+/* Contact.css */
+
+/* ... Existing styles ... */
+
+.whatsapp-logo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  width: 60px; /* Increase the width */
+  height: 60px; /* Increase the height */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px; /* Increase the font-size */
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-logo:hover {
+  background-color: #128c7e;
+}
+
+/* ... Existing styles ... */
+

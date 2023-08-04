@@ -1,0 +1,124 @@
+/* Navbar.css */
+
+/* Navbar.css */
+
+.navbar {
+  background-color: gold;
+  padding: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: DodgerBlue;
+  padding: 10px;
+}
+
+.navbar-brand {
+  font-size: 15px;
+  font-weight: bold;
+  color: DodgerBlue;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.nav-item {
+  margin-left: 1px;
+  font-size:15;
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ff0000;
+  text-decoration:underline;
+}
+
+.form-control {
+  border-radius: 20px;
+}
+
+.btn-outline-success {
+  border-color: #28a745;
+  color: #28a745;
+}
+
+.btn-outline-success:hover {
+  background-color: #28a745;
+  color: #fff;
+}
+
+
+/* Navbar.css */
+
+.donate-item {
+  margin-left: 150px;
+}
+
+.donate-link {
+  color: #fff;
+  background-color: #28a745;
+  border-radius: 20px;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.donate-link:hover {
+  background-color: #C3447A;
+}
+
+
+/* Navbar.css */
+.header-container {
+  background-color: #E56717; /* Add your desired background color here */
+  padding: 10px;
+  width: 100%; /* Occupy full width of the screen */
+}
+
+.welcome-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background-color: red; /* Add the same background color as header-container */
+}
+
+.welcome-header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: yellow;
+  padding: 10px;
+  /* Remove the white background color */
+  transition: transform 0.3s ease;
+}
+
+.welcome-header h1:hover {
+  transform: scale(1.1);
+}
+
+.welcome-header h1::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 3px;
+}

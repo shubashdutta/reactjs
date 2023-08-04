@@ -1,0 +1,97 @@
+/* src/components/SignUp.css */
+
+.signup-container {
+    display: flex;
+    height: 100vh; /* Set the height to 100% of the viewport height */
+  }
+  
+ /* src/components/SignUp.css */
+ .signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('https://i.ibb.co/h8yCTKn/Logo-1.png');
+  background-size: contain; /* Use "contain" to fit the logo within the container */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Rest of the CSS styles for the signup form */
+
+
+.logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient( 135deg,
+  
+  yellow,
+  #ffff00,
+
+ 
+  #4b0082,
+  #9400d3) /* Replace these colors with your desired mix */
+  }
+  
+  .logo-image {
+    width: 20%;
+    max-width: 300px;
+  }
+  
+  
+  .signup-form-container {
+    flex: 1; /* Make the signup form container take up the other half of the available space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .signup-form {
+    width: 80%; /* Adjust the width of the signup form */
+    max-width: 400px; /* Set a maximum width to prevent it from getting too wide */
+  }
+  
+  /* Add any additional styling for the form elements and the button */
+  .signup-form input,
+  .signup-form button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .signup-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .signup-form button:hover {
+    background-color: #0056b3;
+  }
+ 
+  
+  .password-group {
+    position: relative;
+  }
+  
+  .password-group input[type="password"] {
+    padding-right: 30px;
+  }
+  
+  .show-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #666;
+    transition: color 0.2s ease; /* Add transition for smooth animation */
+  }
+  
+  .show-password.showing {
+    color: #007bff;
+  }
+  

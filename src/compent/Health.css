@@ -1,0 +1,67 @@
+/* CSS for the health data container */
+/* Common styles for all screen sizes */
+.health-data-container {
+  display: flex; /* Use flexbox to arrange the boxes in a row */
+  justify-content: center; /* Center the boxes horizontally */
+  gap: 20px; /* Add gap between the boxes */
+  max-width: 800px; /* Set a maximum width for the container */
+  margin: 0 auto; /* Center the container on the page */
+}
+
+/* CSS for each health data box */
+.health-data-box {
+  flex: 1; /* Each box will take an equal portion of the available space */
+  background-color: #f0f0f0; /* Add background color to the box */
+  padding: 20px;
+  text-align: center;
+  color: #333; /* Set the text color to black */
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.health-data-box h1 {
+  background-image: linear-gradient(135deg, #ff0000, #00ff00); /* Replace #ff0000 and #00ff00 with your desired colors */
+  font-size: 30px;
+  color: #fff; /* Set the text color to white for better visibility */
+  padding: 10px 20px; /* Add some padding to the header to make it visually appealing */
+  border-radius: 10px; 
+  margin-bottom: 10px;
+}
+
+.health-data-box p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+/* Mobile Compatibility */
+@media (max-width: 767px) {
+  .health-data-container {
+    flex-direction: column; /* Stack the boxes vertically on smaller screens */
+    align-items: center; /* Center the boxes vertically on smaller screens */
+  }
+
+  .health-data-box {
+    margin-bottom: 20px; /* Add some spacing between the boxes on smaller screens */
+  }
+
+  .health-data-box h1 {
+    font-size: 24px; /* Adjust the font size for smaller screens */
+  }
+}
+
+/* Laptop/Desktop and Tablet View */
+@media (min-width: 768px) {
+  .health-data-box h1 {
+    font-size: 30px; /* Adjust the font size for larger screens */
+  }
+}
+
+  .single-video {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  
+  /* Additional styles and adjustments can be made based on your design requirements */
+  
