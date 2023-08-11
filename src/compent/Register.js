@@ -15,7 +15,7 @@ const Register = () => {
 
     try {
       const response = await axios.post(
-        "http://44.203.57.217:8080/api/signup",
+        "/api/signup",
         formData
       );
 
