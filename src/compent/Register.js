@@ -15,14 +15,13 @@ const Register = () => {
 
     try {
       const response = await axios.post(
-        "https://44.203.57.217:8081/api/signup", // Update with your HTTPS backend URL
+        "http://44.203.57.217:8080/api/signup", // Your backend API URL
         formData,
         {
           headers: {
             "Content-Type": "application/json",
             Accept: "application/json",
           },
-          withCredentials: true, // Include cookies in the request if needed
         }
       );
 
