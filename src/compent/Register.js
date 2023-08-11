@@ -3,9 +3,11 @@ import axios from 'axios';
 
 const Register = () => {
   const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
     email: '',
     password: '',
-    name: '',
+    phone: '',
   });
 
   const handleSubmit = async (e) => {
@@ -13,7 +15,7 @@ const Register = () => {
 
     try {
       const response = await axios.post(
-        "/api/singup",
+        "/api/signup",
         formData
       );
 
@@ -42,6 +44,20 @@ const Register = () => {
       <h2>Register</h2>
       <form onSubmit={handleSubmit}>
         <input
+          type="text"
+          name="firstName"
+          placeholder="First Name"
+          value={formData.firstName}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="lastName"
+          placeholder="Last Name"
+          value={formData.lastName}
+          onChange={handleChange}
+        />
+        <input
           type="email"
           name="email"
           placeholder="Email"
@@ -57,9 +73,9 @@ const Register = () => {
         />
         <input
           type="text"
-          name="name"
-          placeholder="Name"
-          value={formData.name}
+          name="phone"
+          placeholder="Phone"
+          value={formData.phone}
           onChange={handleChange}
         />
         <button type="submit">Register</button>
