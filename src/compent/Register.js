@@ -1,120 +1,74 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import './App.css';
 
-const Register = () => {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-    phone: '',
-  });
+function App() {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [password, setPassword] = useState('');
+  const [message, setMessage] = useState('');
 
-  const handleSubmit = async (e) => {
+  const handleRegistration = async (e) => {
     e.preventDefault();
 
-    try {
-      const response = await axios.post(
-        "/api/signup", // Your backend API URL
-        formData,
-        {
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-        }
-      );
+    const data = {
+      firstName,
+      lastName,
+      email,
+      phone,
+      password
+    };
 
-      if (response.status === 200) {
-        alert("Registration successful!");
-        // Clear form fields
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          password: '',
-          phone: '',
-        });
+    try {
+      const response = await fetch("/api/singup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify(data)
+      });
+
+      const responseData = await response.json();
+
+      if (response.ok) {
+        setMessage("Registration successful. Please log in.");
       } else {
-        alert("Registration failed. Please try again.");
+        setMessage(responseData.error || "Registration failed. Please try again.");
       }
     } catch (error) {
-      console.error("Network error:", error);
-      alert("Registration failed. Please try again.");
+      console.error("An error occurred:", error);
+      setMessage("An error occurred. Please try again later.");
     }
   };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
   return (
-    <div>
-      <h2>Register</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          First Name:
-          <input
-            type="text"
-            name="firstName"
-            value={formData.firstName}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          Last Name:
-          <input
-            type="text"
-            name="lastName"
-            value={formData.lastName}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          Email:
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          Password:
-          <input
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          Phone:
-          <input
-            type="tel"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <br />
-        <button type="submit">Register</button>
-      </form>
+    <div className="App">
+      <div className="container">
+        <h1>User Registration</h1>
+        <form onSubmit={handleRegistration}>
+          <label htmlFor="firstName">First Name:</label>
+          <input type="text" id="firstName" value={firstName} onChange={(e) => setFirstName(e.target.value)} required />
+
+          <label htmlFor="lastName">Last Name:</label>
+          <input type="text" id="lastName" value={lastName} onChange={(e) => setLastName(e.target.value)} required />
+
+          <label htmlFor="email">Email:</label>
+          <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+
+          <label htmlFor="phone">Phone:</label>
+          <input type="text" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} required />
+
+          <label htmlFor="password">Password:</label>
+          <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+
+          <button type="submit">Register</button>
+        </form>
+        <div className="message">{message}</div>
+      </div>
     </div>
   );
-};
+}
 
-export default Register;
+export default App;
