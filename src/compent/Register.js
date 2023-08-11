@@ -15,7 +15,7 @@ const Register = () => {
 
     try {
       const response = await axios.post(
-        "http://44.203.57.217:8080/api/signup", // Your backend API URL
+        "/api/signup", // Your backend API URL
         formData,
         {
           headers: {
